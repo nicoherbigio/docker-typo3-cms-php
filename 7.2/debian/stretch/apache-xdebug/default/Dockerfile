@@ -1,4 +1,4 @@
-FROM nicoherbigio/php:7.2.17-apache-xdebug
+FROM nicoherbigio/php:7.2.18-apache-xdebug
 
 LABEL maintainer="Nico Herbig <nico@nicoherbig.io>"
 
