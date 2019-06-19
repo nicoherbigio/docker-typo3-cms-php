@@ -16,7 +16,7 @@ RUN useradd --gid ${WWW_GROUP} --uid ${WWW_USER_ID} --create-home --shell /bin/b
 
 RUN set -ex \
     && apt-get update \
-    && apt-get install -y --no-install-recommends git libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-dev zlib1g-dev libldap2-dev ghostscript graphicsmagick unzip wget \
+    && apt-get install -y --no-install-recommends git libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-dev libzip-dev libldap2-dev ghostscript graphicsmagick unzip wget \
     && ln -sf /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/libldap.so \
     && ln -sf /usr/lib/x86_64-linux-gnu/liblber.so /usr/lib/liblber.so \
     && ln -sf /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
@@ -24,7 +24,7 @@ RUN set -ex \
     && docker-php-ext-install -j$(nproc) exif gd ldap mysql mysqli opcache soap zip \
     && pecl install apcu-4.0.11 \
     && docker-php-ext-enable apcu \
-    && apt-get remove -y libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-dev zlib1g-dev \
+    && apt-get remove -y libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-dev libzip-dev \
     && rm -rf /var/lib/apt/lists/*
 
 
