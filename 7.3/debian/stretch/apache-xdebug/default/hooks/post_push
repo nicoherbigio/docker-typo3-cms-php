@@ -2,7 +2,7 @@
 
 set -e
 
-TAGS=(7-apache-xdebug 7.3-apache-xdebug 7.3.7-apache-xdebug)
+TAGS=(7-apache-xdebug 7.3-apache-xdebug 7.3.8-apache-xdebug)
 
 # parse image name to get the repository name
 TAG_START=$(expr index "${IMAGE_NAME}" :)
