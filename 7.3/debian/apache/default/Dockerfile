@@ -1,4 +1,4 @@
-FROM nicoherbigio/php:7.3.14-apache
+FROM nicoherbigio/php:7.3.15-apache
 
 LABEL maintainer="Nico Herbig <nico@nicoherbig.io>"
 
