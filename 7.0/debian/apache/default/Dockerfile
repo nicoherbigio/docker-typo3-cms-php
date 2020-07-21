@@ -22,7 +22,7 @@ RUN set -ex \
     && ln -sf /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) exif gd intl ldap mysqli opcache soap zip \
-    && pecl install apcu-5.1.17 \
+    && pecl install apcu-5.1.18 \
     && docker-php-ext-enable apcu \
     && apt-get remove -y libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-dev libzip-dev \
     && rm -rf /var/lib/apt/lists/*
