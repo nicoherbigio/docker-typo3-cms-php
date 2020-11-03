@@ -2,7 +2,7 @@
 
 set -e
 
-TAGS=(7.3-apache 7.3.22-apache)
+TAGS=(7.3-apache 7.3.23-apache)
 
 # parse image name to get the repository name
 TAG_START=$(expr index "${IMAGE_NAME}" :)
