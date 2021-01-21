@@ -11,7 +11,9 @@ env:
   DOCKER_IMAGE_CONTEXT_PATH: 7.2/debian/apache/default/
   DOCKERHUB_IMAGE_TAGS: |
     nicoherbigde/typo3-cms-php:7.2-apache
+    nicoherbigio/typo3-cms-php:7.2-apache
     nicoherbigde/typo3-cms-php:7.2.34-apache
+    nicoherbigio/typo3-cms-php:7.2.34-apache
 
 jobs:
   build-and-push:
