@@ -15,8 +15,8 @@ env:
   DOCKERHUB_IMAGE_TAGS: |
     nicoherbigde/typo3-cms-php:7.4-apache
     nicoherbigio/typo3-cms-php:7.4-apache
-    nicoherbigde/typo3-cms-php:7.4.22-apache
-    nicoherbigio/typo3-cms-php:7.4.22-apache
+    nicoherbigde/typo3-cms-php:7.4.23-apache
+    nicoherbigio/typo3-cms-php:7.4.23-apache
 
 jobs:
   build-and-push:
