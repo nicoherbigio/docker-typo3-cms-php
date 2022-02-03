@@ -1,0 +1,48 @@
+name: Docker Image CI for version 8.1
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/docker-image-8.1.yml'
+      - '8.1/**'
+  schedule:
+    - cron: '0 2 * * 1'
+
+env:
+  DOCKER_IMAGE_CONTEXT_PATH: 8.1/debian/apache/default/
+  DOCKERHUB_IMAGE_TAGS: |
+    nicoherbigde/typo3-cms-php:8.1-apache
+    nicoherbigio/typo3-cms-php:8.1-apache
+    nicoherbigde/typo3-cms-php:8.1.2-apache
+    nicoherbigio/typo3-cms-php:8.1.2-apache
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Git Repository
+        uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: v0.6.3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build Docker Image and Push to DockerHub
+        uses: docker/build-push-action@v2
+        with:
+          context: ${{ env.DOCKER_IMAGE_CONTEXT_PATH }}
+          push: true
+          tags: ${{ env.DOCKERHUB_IMAGE_TAGS }}
