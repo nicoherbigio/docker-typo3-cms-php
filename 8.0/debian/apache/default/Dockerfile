@@ -80,4 +80,4 @@ RUN set -ex \
        } | tee /usr/local/etc/php/conf.d/docker-typo3-cms.ini
 
 
-WORKDIR ${APACHE_DOCUMENT_ROOT}
+WORKDIR /app
