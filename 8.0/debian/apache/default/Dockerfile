@@ -75,8 +75,8 @@ RUN set -ex \
         echo 'max_execution_time = 240'; \
         echo 'max_input_vars = 1500'; \
         echo 'memory_limit = 512M'; \
-        echo 'post_max_size = 32M'; \
-        echo 'upload_max_filesize = 32M'; \
+        echo 'post_max_size = 256M'; \
+        echo 'upload_max_filesize = 256M'; \
        } | tee /usr/local/etc/php/conf.d/docker-typo3-cms.ini
 
 
