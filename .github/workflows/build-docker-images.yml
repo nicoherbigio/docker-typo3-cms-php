@@ -41,8 +41,8 @@ jobs:
             docker-tags: |
               nicoherbigde/typo3-cms-php:8.3-apache
               nicoherbigde/typo3-cms-php:8.3-apache-bullseye
-              nicoherbigde/typo3-cms-php:8.3.2-apache
-              nicoherbigde/typo3-cms-php:8.3.2-apache-bullseye
+              nicoherbigde/typo3-cms-php:8.3.3-apache
+              nicoherbigde/typo3-cms-php:8.3.3-apache-bullseye
 
     steps:
       - name: Checkout Git Repository
