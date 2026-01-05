@@ -53,7 +53,7 @@ RUN set -ex \
     && apt-get install -y --no-install-recommends ghostscript git graphicsmagick libfreetype6-dev libicu-dev libjpeg62-turbo-dev libldap2-dev libmcrypt-dev libpng-dev libxml2-dev libzip-dev unzip wget \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) exif gd intl ldap mysqli opcache soap zip \
-    && pecl install apcu-5.1.25 \
+    && pecl install apcu-5.1.28 \
     && docker-php-ext-enable apcu \
     && apt-get remove -y libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libxml2-dev libzip-dev \
     && rm -rf /var/lib/apt/lists/*
