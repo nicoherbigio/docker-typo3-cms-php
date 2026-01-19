@@ -35,8 +35,8 @@ jobs:
             docker-tags: |
               nicoherbigde/typo3-cms-php:8.3-apache
               nicoherbigde/typo3-cms-php:8.3-apache-trixie
-              nicoherbigde/typo3-cms-php:8.3.29-apache
-              nicoherbigde/typo3-cms-php:8.3.29-apache-trixie
+              nicoherbigde/typo3-cms-php:8.3.30-apache
+              nicoherbigde/typo3-cms-php:8.3.30-apache-trixie
           - version: 8.4-trixie
             docker-context: 8.4/debian/apache/default
             docker-tags: |
