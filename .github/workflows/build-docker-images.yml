@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - '.github/workflows/**'
+      - '7.4/**'
       - '8.2/**'
       - '8.3/**'
       - '8.4/**'
@@ -21,8 +22,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [8.2-trixie, 8.3-trixie, 8.4-trixie, 8.5-trixie]
+        version: [7.4-bullseye, 8.2-trixie, 8.3-trixie, 8.4-trixie, 8.5-trixie]
         include:
+          - version: 7.4-bullseye
+            docker-context: 7.4/debian/apache/default
+            docker-tags: |
+              nicoherbigde/typo3-cms-php:7.4-apache-cve-2026-109618-109619
+              nicoherbigde/typo3-cms-php:7.4-apache-bullseye-cve-2026-109618-109619
+              nicoherbigde/typo3-cms-php:7.4.33-apache-cve-2026-109618-109619
+              nicoherbigde/typo3-cms-php:7.4.33-apache-bullseye-cve-2026-109618-109619
           - version: 8.2-trixie
             docker-context: 8.2/debian/apache/default
             docker-tags: |
