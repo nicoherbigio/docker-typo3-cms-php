@@ -5,7 +5,7 @@
 ## Supported tags and respective `Dockerfile` links
 
  * [`8.5-apache`, `8.5-apache-trixie`, `8.5.12-apache`, `8.5.12-apache-trixie`](https://github.com/nicoherbigio/docker-typo3-cms-php/blob/main/8.5/debian/apache/default/Dockerfile)
- * [`8.4-apache`, `8.4-apache-trixie`, `8.4.27-apache`, `8.4.27-apache-trixie`](https://github.com/nicoherbigio/docker-typo3-cms-php/blob/main/8.4/debian/apache/default/Dockerfile)
+ * [`8.4-apache`, `8.4-apache-trixie`, `8.4.28-apache`, `8.4.28-apache-trixie`](https://github.com/nicoherbigio/docker-typo3-cms-php/blob/main/8.4/debian/apache/default/Dockerfile)
  * [`8.3-apache`, `8.3-apache-trixie`, `8.3.37-apache`, `8.3.37-apache-trixie`](https://github.com/nicoherbigio/docker-typo3-cms-php/blob/main/8.3/debian/apache/default/Dockerfile)
  * [`8.2-apache`, `8.2-apache-trixie`, `8.2.36-apache`, `8.2.36-apache-trixie`](https://github.com/nicoherbigio/docker-typo3-cms-php/blob/main/8.2/debian/apache/default/Dockerfile)
 
